@@ -1,0 +1,214 @@
+<?php
+
+/**
+ * SquirrelMail Configuration File
+ * Created using the configure script, conf.pl
+ */
+
+global $version;
+$config_version = '1.4.0';
+$config_use_color = 1;
+
+$org_name      = "<%= node['chef-squirrelmail']['org_name'] %>";
+$org_logo      = SM_PATH . '<%= node['chef-squirrelmail']['org_logo'] %>';
+$org_logo_width  = '<%= node['chef-squirrelmail']['org_logo_width'] %>';
+$org_logo_height = '<%= node['chef-squirrelmail']['org_logo_height'] %>';
+$org_title     = "<%= node['chef-squirrelmail']['org_title'] %>";
+$signout_page  = '<%= node['chef-squirrelmail']['signout_page'] %>';
+$frame_top     = '<%= node['chef-squirrelmail']['frame_top'] %>';
+
+$provider_uri     = '<%= node['chef-squirrelmail']['provider_uri'] %>';
+
+$provider_name     = '<%= node['chef-squirrelmail']['provider_name'] %>';
+
+$motd = "<%= node['chef-squirrelmail']['motd'] %>";
+
+$squirrelmail_default_language = '<%= node['chef-squirrelmail']['squirrelmail_default_language'] %>';
+$default_charset       = '<%= node['chef-squirrelmail']['default_charset'] %>';
+$lossy_encoding        = <%= node['chef-squirrelmail']['lossy_encoding'] %>;
+
+$domain                 = '<%= node['chef-squirrelmail']['domain'] %>';
+$imapServerAddress      = '<%= node['chef-squirrelmail']['imapServerAddress'] %>';
+$imapPort               = <%= node['chef-squirrelmail']['imapPort'] %>;
+$useSendmail            = <%= node['chef-squirrelmail']['useSendmail'] %>;
+$smtpServerAddress      = '<%= node['chef-squirrelmail']['smtpServerAddress'] %>';
+$smtpPort               = <%= node['chef-squirrelmail']['smtpPort'] %>;
+$sendmail_path          = '<%= node['chef-squirrelmail']['sendmail_path'] %>';
+$sendmail_args          = '<%= node['chef-squirrelmail']['sendmail_args'] %>';
+$pop_before_smtp        = <%= node['chef-squirrelmail']['pop_before_smtp'] %>;
+$pop_before_smtp_host   = '<%= node['chef-squirrelmail']['pop_before_smtp_host'] %>';
+$imap_server_type       = '<%= node['chef-squirrelmail']['imap_server_type'] %>';
+$invert_time            = <%= node['chef-squirrelmail']['invert_time'] %>;
+$optional_delimiter     = '<%= node['chef-squirrelmail']['optional_delimiter'] %>';
+$encode_header_key      = '<%= node['chef-squirrelmail']['encode_header_key'] %>';
+
+$default_folder_prefix          = '<%= node['chef-squirrelmail']['default_folder_prefix'] %>';
+$trash_folder                   = '<%= node['chef-squirrelmail']['trash_folder'] %>';
+$sent_folder                    = '<%= node['chef-squirrelmail']['sent_folder'] %>';
+$draft_folder                   = '<%= node['chef-squirrelmail']['draft_folder'] %>';
+$default_move_to_trash          = <%= node['chef-squirrelmail']['default_move_to_trash'] %>;
+$default_move_to_sent           = <%= node['chef-squirrelmail']['default_move_to_sent'] %>;
+$default_save_as_draft          = <%= node['chef-squirrelmail']['default_save_as_draft'] %>;
+$show_prefix_option             = <%= node['chef-squirrelmail']['show_prefix_option'] %>;
+$list_special_folders_first     = <%= node['chef-squirrelmail']['list_special_folders_first'] %>;
+$use_special_folder_color       = <%= node['chef-squirrelmail']['use_special_folder_color'] %>;
+$auto_expunge                   = <%= node['chef-squirrelmail']['auto_expunge'] %>;
+$default_sub_of_inbox           = <%= node['chef-squirrelmail']['default_sub_of_inbox'] %>;
+$show_contain_subfolders_option = <%= node['chef-squirrelmail']['show_contain_subfolders_option'] %>;
+$default_unseen_notify          = <%= node['chef-squirrelmail']['default_unseen_notify'] %>;
+$default_unseen_type            = <%= node['chef-squirrelmail']['default_unseen_type'] %>;
+$auto_create_special            = <%= node['chef-squirrelmail']['auto_create_special'] %>;
+$delete_folder                  = <%= node['chef-squirrelmail']['delete_folder'] %>;
+$noselect_fix_enable            = <%= node['chef-squirrelmail']['noselect_fix_enable'] %>;
+
+$data_dir                 = SM_PATH . '<%= node['chef-squirrelmail']['data_dir'] %>';
+$attachment_dir           = <%= node['chef-squirrelmail']['attachment_dir'] %>;
+$dir_hash_level           = <%= node['chef-squirrelmail']['dir_hash_level'] %>;
+$default_left_size        = '<%= node['chef-squirrelmail']['default_left_size'] %>';
+$force_username_lowercase = <%= node['chef-squirrelmail']['force_username_lowercase'] %>;
+$default_use_priority     = <%= node['chef-squirrelmail']['default_use_priority'] %>;
+$hide_sm_attributions     = <%= node['chef-squirrelmail']['hide_sm_attributions'] %>;
+$default_use_mdn          = <%= node['chef-squirrelmail']['default_use_mdn'] %>;
+$edit_identity            = <%= node['chef-squirrelmail']['edit_identity'] %>;
+$edit_name                = <%= node['chef-squirrelmail']['edit_name'] %>;
+$hide_auth_header         = <%= node['chef-squirrelmail']['hide_auth_header'] %>;
+$allow_thread_sort        = <%= node['chef-squirrelmail']['allow_thread_sort'] %>;
+$allow_server_sort        = <%= node['chef-squirrelmail']['allow_server_sort'] %>;
+$allow_charset_search     = <%= node['chef-squirrelmail']['allow_charset_search'] %>;
+$uid_support              = <%= node['chef-squirrelmail']['uid_support'] %>;
+
+$theme_css = '<%= node['chef-squirrelmail']['theme_css'] %>';
+$theme_default = <%= node['chef-squirrelmail']['theme_default'] %>;
+$theme[0]['PATH'] = SM_PATH . 'themes/default_theme.php';
+$theme[0]['NAME'] = 'Default';
+$theme[1]['PATH'] = SM_PATH . 'themes/plain_blue_theme.php';
+$theme[1]['NAME'] = 'Plain Blue';
+$theme[2]['PATH'] = SM_PATH . 'themes/sandstorm_theme.php';
+$theme[2]['NAME'] = 'Sand Storm';
+$theme[3]['PATH'] = SM_PATH . 'themes/deepocean_theme.php';
+$theme[3]['NAME'] = 'Deep Ocean';
+$theme[4]['PATH'] = SM_PATH . 'themes/slashdot_theme.php';
+$theme[4]['NAME'] = 'Slashdot';
+$theme[5]['PATH'] = SM_PATH . 'themes/purple_theme.php';
+$theme[5]['NAME'] = 'Purple';
+$theme[6]['PATH'] = SM_PATH . 'themes/forest_theme.php';
+$theme[6]['NAME'] = 'Forest';
+$theme[7]['PATH'] = SM_PATH . 'themes/ice_theme.php';
+$theme[7]['NAME'] = 'Ice';
+$theme[8]['PATH'] = SM_PATH . 'themes/seaspray_theme.php';
+$theme[8]['NAME'] = 'Sea Spray';
+$theme[9]['PATH'] = SM_PATH . 'themes/bluesteel_theme.php';
+$theme[9]['NAME'] = 'Blue Steel';
+$theme[10]['PATH'] = SM_PATH . 'themes/dark_grey_theme.php';
+$theme[10]['NAME'] = 'Dark Grey';
+$theme[11]['PATH'] = SM_PATH . 'themes/high_contrast_theme.php';
+$theme[11]['NAME'] = 'High Contrast';
+$theme[12]['PATH'] = SM_PATH . 'themes/black_bean_burrito_theme.php';
+$theme[12]['NAME'] = 'Black Bean Burrito';
+$theme[13]['PATH'] = SM_PATH . 'themes/servery_theme.php';
+$theme[13]['NAME'] = 'Servery';
+$theme[14]['PATH'] = SM_PATH . 'themes/maize_theme.php';
+$theme[14]['NAME'] = 'Maize';
+$theme[15]['PATH'] = SM_PATH . 'themes/bluesnews_theme.php';
+$theme[15]['NAME'] = 'BluesNews';
+$theme[16]['PATH'] = SM_PATH . 'themes/deepocean2_theme.php';
+$theme[16]['NAME'] = 'Deep Ocean 2';
+$theme[17]['PATH'] = SM_PATH . 'themes/blue_grey_theme.php';
+$theme[17]['NAME'] = 'Blue Grey';
+$theme[18]['PATH'] = SM_PATH . 'themes/dompie_theme.php';
+$theme[18]['NAME'] = 'Dompie';
+$theme[19]['PATH'] = SM_PATH . 'themes/methodical_theme.php';
+$theme[19]['NAME'] = 'Methodical';
+$theme[20]['PATH'] = SM_PATH . 'themes/greenhouse_effect.php';
+$theme[20]['NAME'] = 'Greenhouse Effect (Changes)';
+$theme[21]['PATH'] = SM_PATH . 'themes/in_the_pink.php';
+$theme[21]['NAME'] = 'In The Pink (Changes)';
+$theme[22]['PATH'] = SM_PATH . 'themes/kind_of_blue.php';
+$theme[22]['NAME'] = 'Kind of Blue (Changes)';
+$theme[23]['PATH'] = SM_PATH . 'themes/monostochastic.php';
+$theme[23]['NAME'] = 'Monostochastic (Changes)';
+$theme[24]['PATH'] = SM_PATH . 'themes/shades_of_grey.php';
+$theme[24]['NAME'] = 'Shades of Grey (Changes)';
+$theme[25]['PATH'] = SM_PATH . 'themes/spice_of_life.php';
+$theme[25]['NAME'] = 'Spice of Life (Changes)';
+$theme[26]['PATH'] = SM_PATH . 'themes/spice_of_life_lite.php';
+$theme[26]['NAME'] = 'Spice of Life - Lite (Changes)';
+$theme[27]['PATH'] = SM_PATH . 'themes/spice_of_life_dark.php';
+$theme[27]['NAME'] = 'Spice of Life - Dark (Changes)';
+$theme[28]['PATH'] = SM_PATH . 'themes/christmas.php';
+$theme[28]['NAME'] = 'Holiday - Christmas';
+$theme[29]['PATH'] = SM_PATH . 'themes/darkness.php';
+$theme[29]['NAME'] = 'Darkness (Changes)';
+$theme[30]['PATH'] = SM_PATH . 'themes/random.php';
+$theme[30]['NAME'] = 'Random (Changes every login)';
+$theme[31]['PATH'] = SM_PATH . 'themes/midnight.php';
+$theme[31]['NAME'] = 'Midnight';
+$theme[32]['PATH'] = SM_PATH . 'themes/alien_glow.php';
+$theme[32]['NAME'] = 'Alien Glow';
+$theme[33]['PATH'] = SM_PATH . 'themes/dark_green.php';
+$theme[33]['NAME'] = 'Dark Green';
+$theme[34]['PATH'] = SM_PATH . 'themes/penguin.php';
+$theme[34]['NAME'] = 'Penguin';
+$theme[35]['PATH'] = SM_PATH . 'themes/minimal_bw.php';
+$theme[35]['NAME'] = 'Minimal BW';
+$theme[36]['PATH'] = SM_PATH . 'themes/redmond.php';
+$theme[36]['NAME'] = 'Redmond';
+$theme[37]['PATH'] = SM_PATH . 'themes/netstyle_theme.php';
+$theme[37]['NAME'] = 'Net Style';
+$theme[38]['PATH'] = SM_PATH . 'themes/silver_steel_theme.php';
+$theme[38]['NAME'] = 'Silver Steel';
+$theme[39]['PATH'] = SM_PATH . 'themes/simple_green_theme.php';
+$theme[39]['NAME'] = 'Simple Green';
+$theme[40]['PATH'] = SM_PATH . 'themes/wood_theme.php';
+$theme[40]['NAME'] = 'Wood';
+$theme[41]['PATH'] = SM_PATH . 'themes/bluesome.php';
+$theme[41]['NAME'] = 'Bluesome';
+$theme[42]['PATH'] = SM_PATH . 'themes/simple_green2.php';
+$theme[42]['NAME'] = 'Simple Green 2';
+$theme[43]['PATH'] = SM_PATH . 'themes/simple_purple.php';
+$theme[43]['NAME'] = 'Simple Purple';
+
+$default_use_javascript_addr_book = <%= node['chef-squirrelmail']['default_use_javascript_addr_book'] %>;
+$ldap_server[0] = array(
+    'host' => '<%= node['chef-squirrelmail']['host'] %>',
+    'base' => '<%= node['chef-squirrelmail']['base'] %>',
+    'name' => '<%= node['chef-squirrelmail']['name'] %>',
+    'port' => <%= node['chef-squirrelmail']['port'] %>,
+    'binddn' => '<%= node['chef-squirrelmail']['binddn'] %>',
+    'bindpw' => '<%= node['chef-squirrelmail']['bindpw'] %>',
+    'protocol' => <%= node['chef-squirrelmail']['protocol'] %>
+);
+
+$abook_global_file = '<%= node['chef-squirrelmail']['abook_global_file'] %>';
+$abook_global_file_writeable = <%= node['chef-squirrelmail']['abook_global_file_writeable'] %>;
+$abook_global_file_listing = <%= node['chef-squirrelmail']['abook_global_file_listing'] %>;
+$abook_file_line_length = <%= node['chef-squirrelmail']['abook_file_line_length'] %>;
+
+$addrbook_dsn = '';
+$addrbook_table = 'address';
+
+$prefs_dsn = '';
+$prefs_table = 'userprefs';
+$prefs_user_field = 'user';
+$prefs_key_field = 'prefkey';
+$prefs_val_field = 'prefval';
+$addrbook_global_dsn = '';
+$addrbook_global_table = 'global_abook';
+$addrbook_global_writeable = false;
+$addrbook_global_listing = false;
+
+$no_list_for_subscribe = false;
+$smtp_auth_mech = 'none';
+$imap_auth_mech = 'login';
+$smtp_sitewide_user = '';
+$smtp_sitewide_pass = '';
+$use_imap_tls = false;
+$use_smtp_tls = false;
+$session_name = 'SQMSESSID';
+$only_secure_cookies     = true;
+$disable_security_tokens = false;
+$check_referrer          = '';
+
+$config_location_base    = '<%= node['chef-squirrelmail']['config_location_base'] %>';
+
+@include SM_PATH . 'config/config_local.php';

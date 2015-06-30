@@ -1,0 +1,8 @@
+name             'chef-squirrelmail'
+maintainer       'LII Stéphane'
+maintainer_email 'stephane.lii@informatique.gov.pf'
+license          'All rights reserved'
+description      'Installs/Configures chef-squirrelmail'
+long_description 'Installs/Configures chef-squirrelmail'
+version          '0.1.0'
+depends 'apt'

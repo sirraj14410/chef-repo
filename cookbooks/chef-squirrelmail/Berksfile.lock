@@ -1,0 +1,10 @@
+DEPENDENCIES
+  apt
+  chef-squirrelmail
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.6.0)
+  chef-squirrelmail (0.1.0)
+    apt (>= 0.0.0)
